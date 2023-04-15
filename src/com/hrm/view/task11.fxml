@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="827.0" prefWidth="1150.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hrm.controller.task_controller">
+   <children>
+      <Label layoutX="29.0" layoutY="6.0" prefHeight="36.0" prefWidth="342.0" text="Tasks" textFill="#0277bd">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="9.0" layoutY="41.0" prefHeight="772.0" prefWidth="1133.0" style="-fx-background-color: #FFFF;" styleClass="semi-top-form" stylesheets="@../assets/css/DashboarDesign.css">
+         <children>
+            <TableView fx:id="table_PandE" layoutX="473.0" layoutY="8.0" prefHeight="453.0" prefWidth="653.0">
+              <columns>
+                <TableColumn fx:id="ID_col" prefWidth="45.0" text="ID" />
+                <TableColumn fx:id="title_col" prefWidth="143.0" text="Title" />
+                  <TableColumn fx:id="assignee_col" prefWidth="142.0" text="Assignee " />
+                  <TableColumn fx:id="status_col" prefWidth="87.0" text="Status" />
+                  <TableColumn fx:id="priority_col" prefWidth="133.0" text="Priority" />
+                  <TableColumn fx:id="deadline_col" prefWidth="106.0" text="Deadline" />
+                  <TableColumn fx:id="create_col" prefWidth="106.0" text="Create at" />
+                  <TableColumn fx:id="descrip_col" prefWidth="106.0" text="Description" />
+                  <TableColumn fx:id="action_col" prefWidth="106.0" text="Action" />
+              </columns>
+            </TableView>
+            <Pagination fx:id="pagination" layoutX="728.0" layoutY="469.0" pageCount="20" prefHeight="35.0" prefWidth="200.0" />
+            <AnchorPane layoutX="9.0" layoutY="52.0" prefHeight="440.0" prefWidth="455.0" style="-fx-border-radius: 10PX;" styleClass="semi-top-form" stylesheets="@../assets/css/DashboarDesign.css">
+               <children>
+                  <TextArea fx:id="description_field" layoutX="238.0" layoutY="291.0" prefHeight="85.0" prefWidth="193.0" promptText="Description" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+                  <TextField fx:id="employee_field" layoutX="235.0" layoutY="29.0" prefHeight="26.0" prefWidth="200.0" promptText="Assignee" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+                  <DatePicker fx:id="create_at_field" layoutX="14.0" layoutY="221.0" prefHeight="27.0" prefWidth="193.0" promptText="Create at" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+                  <TextField fx:id="ID_field" layoutX="14.0" layoutY="29.0" prefHeight="26.0" prefWidth="200.0" promptText="ID" styleClass="textfield" stylesheets="@../assets/css/login.css">
+                     <tooltip>
+                        <Tooltip text="ID " />
+                     </tooltip></TextField>
+                  <TextArea fx:id="title_field" layoutX="14.0" layoutY="107.0" prefHeight="59.0" prefWidth="209.0" promptText="Title" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+                  <DatePicker fx:id="dealine_field" layoutX="238.0" layoutY="137.0" prefHeight="27.0" prefWidth="193.0" promptText="Deadline" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+                  <ComboBox fx:id="status_box" layoutX="14.0" layoutY="333.0" opacity="0.55" prefHeight="27.0" prefWidth="186.0" promptText="Status" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+                  <Button fx:id="Search_P" layoutX="401.0" layoutY="28.0" mnemonicParsing="false" onAction="#SearchEmployee" styleClass="search-btn" stylesheets="@../assets/css/DashboarDesign.css" AnchorPane.bottomAnchor="387.0">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="SEARCH" size="1.5em" text="" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="save_btn2" layoutX="288.0" layoutY="395.0" mnemonicParsing="false" onAction="#AddPandE" prefHeight="40.0" prefWidth="59.0" styleClass="insert-btn" stylesheets="@../assets/css/DashboarDesign.css">
+                     <graphic>
+                        <FontAwesomeIcon fill="#2f3f9e" glyphName="SAVE" size="2EM" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="print_btn1" layoutX="223.0" layoutY="395.0" mnemonicParsing="false" onAction="#Print" prefHeight="32.0" prefWidth="59.0" styleClass="insert-btn" stylesheets="@../assets/css/DashboarDesign.css" AnchorPane.rightAnchor="173.0">
+                     <graphic>
+                        <FontAwesomeIcon fill="#78909c" glyphName="PRINT" size="2EM" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="refresh_btn2" layoutX="355.0" layoutY="395.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="40.0" prefWidth="59.0" styleClass="clear-btn" stylesheets="@../assets/css/DashboarDesign.css">
+                     <graphic>
+                        <FontAwesomeIcon fill="#00c853" glyphName="REFRESH" size="2EM" />
+                     </graphic>
+                  </Button>
+                  <ComboBox fx:id="priority_field" layoutX="242.0" layoutY="208.0" opacity="0.56" prefHeight="27.0" prefWidth="193.0" promptText="Priority" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+               </children>
+            </AnchorPane>
+            <TextField fx:id="search_field" layoutX="20.0" layoutY="14.0" prefHeight="32.0" prefWidth="424.0" promptText="Search" style="-fx-background-color: #ffff;" styleClass="textfield" stylesheets="@../assets/css/DashboarDesign.css" />
+            <AnchorPane layoutX="49.0" layoutY="509.0" prefHeight="235.0" prefWidth="1039.0" style="-fx-border-radius: 10px;" styleClass="semi-top-form" stylesheets="@../assets/css/DashboarDesign.css">
+               <children>
+                  <TableView fx:id="table_Po" layoutX="448.0" layoutY="8.0" prefHeight="204.0" prefWidth="572.0" styleClass="table-view-search" stylesheets="@../assets/css/DashboarDesign.css">
+                    <columns>
+                      <TableColumn fx:id="id_P_col" prefWidth="54.0" text="ID" />
+                      <TableColumn fx:id="task_col" prefWidth="244.0" text="Task title" />
+                        <TableColumn fx:id="position_col" minWidth="0.0" prefWidth="173.0" text="Department" />
+                        <TableColumn fx:id="action_P_col" minWidth="0.0" prefWidth="99.0" text="Action" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="ID_TP" layoutX="74.0" layoutY="36.0" prefHeight="26.0" prefWidth="238.0" promptText="ID" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+                  <TextField fx:id="Task_iD" layoutX="74.0" layoutY="94.0" prefHeight="26.0" prefWidth="238.0" promptText="Task ID" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+                  <Button fx:id="searh_P" layoutX="277.0" layoutY="146.0" mnemonicParsing="false" onAction="#SeachPosition" styleClass="search-btn" stylesheets="@../assets/css/DashboarDesign.css" AnchorPane.bottomAnchor="81.0" />
+                  <Button fx:id="save_btn1" layoutX="115.0" layoutY="212.0" mnemonicParsing="false" onAction="#AddTaskPosition" prefHeight="32.0" prefWidth="59.0" styleClass="insert-btn" stylesheets="@../assets/css/DashboarDesign.css">
+                     <graphic>
+                        <FontAwesomeIcon fill="#2f3f9e" glyphName="SAVE" size="1.5em" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Save" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="refresh_btn1" layoutX="181.0" layoutY="212.0" mnemonicParsing="false" onAction="#Refresh1" prefHeight="26.0" prefWidth="59.0" styleClass="clear-btn" stylesheets="@../assets/css/DashboarDesign.css">
+                     <graphic>
+                        <FontAwesomeIcon fill="#00c853" glyphName="REFRESH" size="1.5em" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip contentDisplay="TOP" graphicTextGap="1.0" opacity="0.89" text="Refresh" />
+                     </tooltip>
+                  </Button>
+                  <Pagination fx:id="pagination1" layoutX="660.0" layoutY="212.0" pageCount="20" prefHeight="40.0" prefWidth="200.0" />
+                  <ComboBox fx:id="derpartment_box" layoutX="74.0" layoutY="151.0" opacity="0.57" prefHeight="27.0" prefWidth="249.0" promptText="Department" styleClass="textfield" stylesheets="@../assets/css/login.css" visibleRowCount="4" />
+               </children>
+            </AnchorPane>
+            <FontAwesomeIcon glyphName="SEARCH" layoutX="421.0" layoutY="36.0" size="1.5em" text="" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

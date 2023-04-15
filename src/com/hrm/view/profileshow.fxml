@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="705.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hrm.controller.profileshow_controller">
+   <children>
+      <Label layoutX="315.0" layoutY="6.0" text="Profile" textFill="#0277bd">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="22.0" layoutY="49.0" prefHeight="771.0" prefWidth="661.0" style="-fx-border-radius: 1.5em; -fx-background-color: #ffff;" styleClass="semi-top-form" stylesheets="@../assets/css/DashboarDesign.css">
+         <children>
+            <AnchorPane layoutX="288.0" layoutY="1.0" prefHeight="754.0" prefWidth="359.0" style="-fx-background-color: #ffff;" styleClass="card-form" stylesheets="@../assets/css/login.css">
+               <children>
+                  <TextArea fx:id="descrip_text" layoutX="33.0" layoutY="609.0" prefHeight="111.0" prefWidth="294.0" style="-fx-border-color: #ffff;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextArea>
+                  <Label layoutX="21.0" layoutY="14.0" text="Department :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="87.0" text="Position :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="department_text" layoutX="33.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kinh doanh" wrappingWidth="293.9999965997413">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="21.0" layoutY="185.0" text="Woking day :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="270.0" text="Salary :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="work_text" layoutX="33.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Truong phong kinh doang" wrappingWidth="293.9999965997413">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="position_text" layoutX="33.0" layoutY="113.0" prefHeight="52.0" prefWidth="294.0" style="-fx-border-color: #ffff;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextArea>
+                  <Text fx:id="principal_text" layoutX="33.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Truong phong kinh doang" wrappingWidth="293.9999965997413">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="21.0" layoutY="367.0" text="Principal :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="salary_text" layoutX="33.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Truong phong kinh doang" wrappingWidth="293.9999965997413">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="23.0" layoutY="461.0" text="On leave :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="onleave_text" layoutX="33.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Truong phong kinh doang" wrappingWidth="293.9999965997413">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="32.0" layoutY="542.0" text="Description :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="36.0" layoutY="14.0" prefHeight="187.0" prefWidth="200.0" style="-fx-border-radius: 1.1em;" styleClass="semi-top-form" stylesheets="@../assets/css/DashboarDesign.css">
+               <children>
+                  <BorderPane fx:id="image_pane" layoutX="14.0" layoutY="5.0" prefHeight="177.0" prefWidth="172.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="26.0" layoutY="252.0" text="Fullname :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="396.0" text="Gmail :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="324.0" text=" Birthday :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="466.0" text="Telephone :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="552.0" text="Address :">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Text fx:id="DOB_text" layoutX="30.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="31/01/1998" wrappingWidth="239.0000068768859">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="gmail_text" layoutX="25.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nguyenguyenthuan231@gmail.com" wrappingWidth="238.99999790638685">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="phone_text" layoutX="30.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="325345438y598435" wrappingWidth="239.00000162422657">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="fullname_txt" layoutX="25.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nguyen Van Thuan" wrappingWidth="239.0000068768859">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <TextArea fx:id="address_text" layoutX="22.0" layoutY="610.0" prefHeight="111.0" prefWidth="246.0" style="-fx-border-color: #ffff;">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

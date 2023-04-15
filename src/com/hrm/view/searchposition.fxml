@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="465.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hrm.controller.searchPosition_controller">
+   <children>
+      <TableView fx:id="tablse_s" layoutX="13.0" layoutY="66.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="439.0" styleClass="table-view-search" stylesheets="@../assets/css/DashboarDesign.css">
+        <columns>
+          <TableColumn fx:id="id_col" prefWidth="51.0" text="ID" />
+          <TableColumn fx:id="name_col" prefWidth="212.0" text="Position" />
+            <TableColumn fx:id="whocreate_col" prefWidth="173.0" text="Who create" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search_fiield" layoutX="18.0" layoutY="22.0" prefHeight="32.0" prefWidth="369.0" promptText="Search" style="-fx-border-radius: 8px;" styleClass="semi-top-form" stylesheets="@../assets/css/DashboarDesign.css" />
+      <FontAwesomeIcon glyphName="SEARCH" layoutX="360.0" layoutY="45.0" size="1.7em" text="" />
+      <Button fx:id="clear_btn" layoutX="402.0" layoutY="21.0" mnemonicParsing="false" onAction="#Refresh" styleClass="clear-btn" stylesheets="@../assets/css/DashboarDesign.css">
+         <graphic>
+            <FontAwesomeIcon fill="#2f8353" glyphName="REFRESH" size="1.6EM" />
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

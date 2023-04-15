@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="827.0" prefWidth="1149.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hrm.controller.principal_controller">
+   <children>
+      <Label layoutX="10.0" layoutY="-4.0" prefHeight="36.0" prefWidth="152.0" text="Principal" textFill="#0277bd">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="10.0" layoutY="32.0" prefHeight="780.0" prefWidth="1129.0" style="-fx-background-color: #FFFF;" styleClass="semi-top-form" stylesheets="@../assets/css/DashboarDesign.css">
+         <children>
+            <TableView fx:id="table_principal" layoutX="28.0" layoutY="45.0" prefHeight="352.0" prefWidth="1074.0">
+              <columns>
+                <TableColumn fx:id="ID_col" prefWidth="35.0" text="ID" />
+                <TableColumn fx:id="depart_col" prefWidth="131.0" text="Department" />
+                  <TableColumn fx:id="emname_col" prefWidth="183.0" text="Employee name" />
+                  <TableColumn fx:id="money_col" prefWidth="128.0" text="Money" />
+                  <TableColumn fx:id="type_col" prefWidth="111.0" text="Type" />
+                  <TableColumn minWidth="0.0" prefWidth="0.0" />
+                  <TableColumn fx:id="date_col" minWidth="0.0" prefWidth="115.0" text="Date principal" />
+                  <TableColumn fx:id="create_col" prefWidth="142.0" text="Create at" />
+                  <TableColumn fx:id="descrip_col" prefWidth="198.0" text="Description" />
+                  <TableColumn fx:id="action_col" prefWidth="116.0" text="Action" />
+              </columns>
+            </TableView>
+            <Button fx:id="save_btn" layoutX="963.0" layoutY="729.0" mnemonicParsing="false" onAction="#AddPrinciple" prefHeight="40.0" prefWidth="59.0" styleClass="insert-btn" stylesheets="@../assets/css/DashboarDesign.css">
+               <graphic>
+                  <FontAwesomeIcon fill="#2f3f9e" glyphName="SAVE" size="2EM" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Save" />
+               </tooltip>
+            </Button>
+            <Button fx:id="print_btn" layoutX="896.0" layoutY="729.0" mnemonicParsing="false" onAction="#Print" prefHeight="32.0" prefWidth="59.0" styleClass="insert-btn" stylesheets="@../assets/css/DashboarDesign.css" visible="false">
+               <graphic>
+                  <FontAwesomeIcon fill="#78909c" glyphName="PRINT" size="2EM" />
+               </graphic>
+            </Button>
+            <Button fx:id="refresh_btn" layoutX="1030.0" layoutY="729.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="40.0" prefWidth="59.0" styleClass="clear-btn" stylesheets="@../assets/css/DashboarDesign.css">
+               <graphic>
+                  <FontAwesomeIcon fill="#00c853" glyphName="REFRESH" size="2EM" />
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Refresh" />
+               </tooltip>
+            </Button>
+            <Pagination fx:id="pagination" layoutX="455.0" layoutY="397.0" pageCount="20" prefHeight="35.0" prefWidth="200.0" />
+            <AnchorPane layoutX="21.0" layoutY="442.0" prefHeight="281.0" prefWidth="1088.0" style="-fx-border-radius: 10PX;" styleClass="semi-top-form" stylesheets="@../assets/css/DashboarDesign.css">
+               <children>
+                  <TextField fx:id="money_ffield" layoutX="24.0" layoutY="102.0" prefHeight="26.0" prefWidth="229.0" promptText="Value money" styleClass="textfield" stylesheets="@../assets/css/login.css">
+                     <tooltip>
+                        <Tooltip text="must be number" />
+                     </tooltip></TextField>
+                  <TextField fx:id="id_field" layoutX="24.0" layoutY="241.0" prefHeight="26.0" prefWidth="229.0" promptText="ID" styleClass="textfield" stylesheets="@../assets/css/login.css" visible="false" />
+                  <DatePicker fx:id="date_field" layoutX="24.0" layoutY="189.0" prefHeight="27.0" prefWidth="229.0" promptText="Date principal" styleClass="textfield" stylesheets="@../assets/css/login.css">
+                     <tooltip>
+                        <Tooltip text="yyyy-MM-dd" />
+                     </tooltip></DatePicker>
+                  <DatePicker fx:id="creat_field" layoutX="304.0" layoutY="101.0" prefHeight="27.0" prefWidth="247.0" promptText="Create at" styleClass="textfield" stylesheets="@../assets/css/login.css">
+                     <tooltip>
+                        <Tooltip text="YYYY-MM-dd" />
+                     </tooltip></DatePicker>
+                  <TextField fx:id="emname_field" layoutX="304.0" layoutY="22.0" prefHeight="26.0" prefWidth="247.0" promptText="EmployeeID" styleClass="textfield" stylesheets="@../assets/css/login.css">
+                     <tooltip>
+                        <Tooltip text="must be nubmer" />
+                     </tooltip></TextField>
+                  <TextArea fx:id="description_field" layoutX="292.0" layoutY="172.0" prefHeight="88.0" prefWidth="259.0" promptText="Description" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+                  <TableView fx:id="table_em_search" layoutX="587.0" layoutY="50.0" prefHeight="225.0" prefWidth="494.0" style="-fx-background-color: #ffff;" styleClass="table-view-search" stylesheets="@../assets/css/DashboarDesign.css">
+                    <columns>
+                      <TableColumn fx:id="emID_col" prefWidth="42.0" text="ID" />
+                      <TableColumn fx:id="employee_col" prefWidth="163.0" text="Emplyee" />
+                        <TableColumn fx:id="department_S_col" prefWidth="126.0" text="Department" />
+                        <TableColumn fx:id="DOB_col" prefWidth="104.0" text="DOB" />
+                        <TableColumn fx:id="avatar_col" prefWidth="114.0" text="Avatar" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="search_em_field" layoutX="619.0" layoutY="9.0" prefHeight="26.0" prefWidth="332.0" promptText="Search Employee" styleClass="textfield" stylesheets="@../assets/css/login.css" />
+                  <ComboBox fx:id="Type_file" layoutX="28.0" layoutY="27.0" opacity="0.61" prefHeight="25.0" prefWidth="222.0" promptText="Type" styleClass="textfield" stylesheets="@../assets/css/login.css">
+                     <tooltip>
+                        <Tooltip text="Type" />
+                     </tooltip></ComboBox>
+                  <Label fx:id="type_label" layoutX="25.0" layoutY="53.0" prefHeight="26.0" prefWidth="229.0" text="Label" textFill="#e81717" visible="false">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="31.0" text="*" textFill="#e81717">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="304.0" layoutY="26.0" text="*" textFill="#e81717">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="money_label" layoutX="24.0" layoutY="131.0" prefHeight="18.0" prefWidth="222.0" text="Label" textFill="#e81717" visible="false">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Date_label" layoutX="24.0" layoutY="222.0" prefHeight="19.0" prefWidth="222.0" text="Label" textFill="#e81717" visible="false">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emid_label" layoutX="304.0" layoutY="50.0" prefHeight="26.0" prefWidth="247.0" text="Label" textFill="#e81717" visible="false">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="create_label" layoutX="304.0" layoutY="131.0" prefHeight="19.0" prefWidth="247.0" text="Label" textFill="#e81717" visible="false">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="307.0" layoutY="105.0" text="*" textFill="#e81717">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="106.0" text="*" textFill="#e81717">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="193.0" text="*" textFill="#e81717">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="search_field" layoutX="30.0" layoutY="4.0" prefHeight="32.0" prefWidth="459.0" promptText="Search" style="-fx-background-color: #ffff;" styleClass="textfield" stylesheets="@../assets/css/DashboarDesign.css" />
+            <FontAwesomeIcon glyphName="SEARCH" layoutX="463.0" layoutY="24.0" size="1.5em" text="" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
